@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}/* style (*) applied to entire doc*/
+
+body {
+  font-family: 'Permanent Marker', cursive;
+}/* body text font family from google fonts api */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}/*style for class app in html doc */
+
+header h1 {
+  margin: 50px 0px 30px 0px;
+  text-align: center;
+  font-size: 110px;
+}/*header spacing and sizing*/
+header p {
+  font-size: 55px;
+}/*page instructions spacing and sizing*/
+
+.pads {
+  background: lightblue;
+  width: 100%;
+  display: flex;
+}/*styles parent elem background width and spacing flex accross screen*/
+.pads > div {
+  height: 100px;
+  width: 100px;
+  flex: 1;
+}/*styles child elm used for bubble event listener functions*/
+.pad1 {
+  background: #60d444;
+}/*styles pad1 hexdec color*/
+.pad2 {
+  background: #4286f4;
+}/*styles pad2 hexdec color*/
+.pad3 {
+  background: #d579d8;
+}/*styles pad3 hexdec color*/
+.pad4 {
+  background: #d3d160;
+}/*styles pad4 hexdec color*/
+.pad5 {
+  background: #f4b200;
+}/*styles pad5 hexdec color*/
+.pad6 {
+  background: #f40000;
+}/*styles pad6 hexdec color*/
+
+.visual > div {
+  position: absolute;
+  bottom: 0%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transform: scale(1);
+  z-index: -1;
+}/*styles visual div to create positioning and sizing */
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+  }
+
+  100% {
+    bottom: 00%;
+    left: 80%;
+  }
+}/*defined behavior of CSS animation of jump 
+bubble action for each bubble with same 
+start middle and end postion
+ of 0% 50% 100%*/
